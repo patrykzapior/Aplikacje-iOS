@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Pompki" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Licznik:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yjv-ZV-Y9S">
+                                <rect key="frame" x="107" y="142" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="7oE-uQ-lMP"/>
+                                    <constraint firstAttribute="width" constant="200" id="Xu5-NK-MOF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3uP-oh-gll">
+                                <rect key="frame" x="63" y="209" width="288" height="168"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="288" id="aZZ-Yi-LwD"/>
+                                    <constraint firstAttribute="height" constant="168" id="acC-CP-7UT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="100"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="seria  " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iu2-FA-FuK">
+                                <rect key="frame" x="63" y="467" width="288" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Cev-lE-d4j"/>
+                                    <constraint firstAttribute="width" constant="288" id="Lfe-z1-n04"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="15" translatesAutoresizingMaskIntoConstraints="NO" id="kdQ-eT-pHM">
+                                <rect key="frame" x="300" y="470" width="94" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="stepperAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="ueW-8n-bYp"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="powtórzenia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tlz-z5-wTo">
+                                <rect key="frame" x="63" y="537" width="288" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1kl-oL-op3">
+                                <rect key="frame" x="0.0" y="574" width="414" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="uei-fQ-xhW"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="63d-LW-eJ9"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="3uP-oh-gll" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="63" id="1Ds-Qa-Cql"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3uP-oh-gll" secondAttribute="trailing" constant="63" id="62d-qg-wOv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iu2-FA-FuK" secondAttribute="trailing" constant="63" id="NlB-a0-cem"/>
+                            <constraint firstItem="iu2-FA-FuK" firstAttribute="top" secondItem="3uP-oh-gll" secondAttribute="bottom" constant="90" id="Xdt-se-RFU"/>
+                            <constraint firstItem="3uP-oh-gll" firstAttribute="top" secondItem="Yjv-ZV-Y9S" secondAttribute="bottom" constant="33" id="ag1-J9-2Pg"/>
+                            <constraint firstItem="Yjv-ZV-Y9S" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="122" id="bJP-gr-qB1"/>
+                            <constraint firstItem="Yjv-ZV-Y9S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="mnA-cU-5gf"/>
+                            <constraint firstItem="iu2-FA-FuK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="63" id="v6V-jQ-vFN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yjv-ZV-Y9S" secondAttribute="trailing" constant="107" id="y1e-mz-Spc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="uNT-RX-gGb" appends="YES" id="Zzm-3c-smM"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="label1" destination="Yjv-ZV-Y9S" id="14m-oX-PbM"/>
+                        <outlet property="liczbaPowtorzenLabel" destination="Tlz-z5-wTo" id="33Q-RB-zea"/>
+                        <outlet property="licznikLabel" destination="3uP-oh-gll" id="l9A-e7-K07"/>
+                        <outlet property="pickerView" destination="1kl-oL-op3" id="MNF-jF-k9p"/>
+                        <outlet property="seriaLabel" destination="iu2-FA-FuK" id="CxI-vM-0qE"/>
+                        <outlet property="steper" destination="kdQ-eT-pHM" id="maZ-kh-daW"/>
+                        <outlet property="tapRecognizer" destination="uNT-RX-gGb" id="S9i-ls-FWt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="uNT-RX-gGb">
+                    <connections>
+                        <action selector="tapGest:" destination="BYZ-38-t0r" id="cq7-iT-m6Z"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-78.260869565217391" y="132.88043478260872"/>
+        </scene>
+    </scenes>
+</document>
